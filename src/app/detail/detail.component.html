@@ -1,0 +1,19 @@
+<div class="backward">
+  <mat-icon class="backward-icon" (click)="goBack()">arrow_back</mat-icon>
+</div>
+<div class="recipe-details">
+  <div class="recipe-details__item">
+    <img [src]="recipeDetail?.strDrinkThumb" alt="Card image cap" />
+    <div class="recipe-details__item-body">
+      <h2>{{ recipeDetail?.strDrink }}</h2>
+      <h4>Ingredients:</h4>
+      <ul>
+        <li>{{ recipeDetail?.strIngredient1 }}</li>
+        <li>{{ recipeDetail?.strIngredient2 }}</li>
+        <li>{{ recipeDetail?.strIngredient3 }}</li>
+        <li>{{ recipeDetail?.strIngredient4 }}</li>
+        <li>{{ recipeDetail?.strIngredient5 }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

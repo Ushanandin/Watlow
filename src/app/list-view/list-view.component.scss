@@ -1,0 +1,38 @@
+.filter-selection-area {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .home-icon {
+    cursor: pointer;
+    color: darkblue;
+  }
+}
+
+.loader {
+  display: grid;
+  place-items: center;
+}
+
+.drink-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+
+  &__item {
+    width: 23%;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+}
+
+.card-title--color {
+  color: chocolate;
+}

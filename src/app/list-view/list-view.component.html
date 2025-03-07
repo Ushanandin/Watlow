@@ -1,0 +1,41 @@
+<div class="filter-selection-area">
+  <mat-icon
+    aria-hidden="false"
+    class="home-icon"
+    fontIcon="home"
+    (click)="toHome()"
+  ></mat-icon>
+  <mat-button-toggle-group (change)="onChangeClick($event)" value="All">
+    <mat-button-toggle value="All">All</mat-button-toggle>
+    <mat-button-toggle value="Alcoholic">Alcoholic</mat-button-toggle>
+    <mat-button-toggle value="Non Alcoholic">Non Alcoholic</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+@if(pageLoader && drinkList?.length === 0) {
+<div class="loader">
+  <mat-spinner></mat-spinner>
+</div>
+}@else if(!pageLoader && drinkList?.length === 0){
+<div class="loader">
+  <h1>No Drinks Available Now</h1>
+</div>
+} @else {
+<div class="drink-list">
+  @for(item of drinkList; track item.idDrink) {
+  <div class="card drink-list__item" (click)="onItemClick(item)">
+    <img
+      class="card-img-top"
+      [src]="item?.strDrinkThumb"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h2 class="card-title card-title--color">{{ item?.strDrink }}</h2>
+      <p class="card-text">
+        {{ item?.strAlcoholic }}
+        {{ item?.strIBA }}
+      </p>
+    </div>
+  </div>
+  }
+</div>
+}

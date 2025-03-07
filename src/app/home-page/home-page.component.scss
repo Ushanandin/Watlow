@@ -1,0 +1,44 @@
+.home-background {
+  background-image: url("/assets/home.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  place-items: center;
+  height: 100vh;
+
+  &__card {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    width: 50%;
+    height: 11%;
+
+    &-status {
+      width: 30%;
+      height: 100%;
+      background-color: #cee26b;
+      border-radius: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .home-background__card {
+    flex-direction: column;
+
+    &-status {
+      width: 90%;
+    }
+  }
+}

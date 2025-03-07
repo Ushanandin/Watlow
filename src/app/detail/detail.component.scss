@@ -1,0 +1,42 @@
+.recipe-details {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  text-align: center;
+
+  &__item {
+    border-radius: 5px;
+    display: flex;
+    width: 70%;
+
+    &-body {
+      background-color: aliceblue;
+      width: 50%;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      h2 {
+        color: rgb(235, 141, 17);
+      }
+      li {
+        font-style: italic;
+        text-align: left;
+      }
+    }
+
+    img {
+      width: 50%;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  }
+}
+
+.backward {
+  padding: 2rem 0rem 0rem 3rem;
+  color: darkblue;
+  &-icon {
+    cursor: pointer;
+  }
+}
